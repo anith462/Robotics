@@ -1,0 +1,21 @@
+<OpenSpanDesignDocument Version="25.1" Serializer="2.0" Culture="en-US">
+  <ComponentInfo>
+    <Type Value="OpenSpan.Automation.GlobalContainer" />
+    <Assembly Value="OpenSpan.Automation" />
+    <Dependencies />
+    <AssemblyReferences>
+      <Assembly Value="mscorlib" />
+      <Assembly Value="System" />
+      <Assembly Value="System.Windows.Forms" />
+      <Assembly Value="OpenSpan" />
+      <Assembly Value="OpenSpan.Automation" />
+      <Assembly Value="OpenSpan.Controls" />
+    </AssemblyReferences>
+    <DynamicAssemblyReferences />
+    <FileReferences />
+    <BuildReferences />
+  </ComponentInfo>
+  <Component Version="1.0">
+    <OpenSpan.Automation.GlobalContainer Name="Globals" Id="GlobalContainer-8DE813C44876A73" />
+  </Component>
+</OpenSpanDesignDocument>
