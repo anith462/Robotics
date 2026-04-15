@@ -1,0 +1,55 @@
+{
+  "Id": "Project-8DE813C44865BA9",
+  "Exclude": [
+    "bin",
+    "**/_xray_",
+    "**.xray*",
+    "**.git*",
+    "**/project.*",
+    "**.md5",
+    "**.etag",
+    "**.json",
+    "\\*_/project._",
+    "**/publicassemblies"
+  ],
+  "Include": [],
+  "DeploymentExclude": [
+    "**.Screenshots.pResources",
+    "**.TestCases.pResources",
+    "**.TestResults.pResources"
+  ],
+  "Upgrade": {
+    "Project": "25.1.6",
+    "Transformation": "25.1.0.11"
+  },
+  "Settings": [
+    [
+      "DeploymentVersion",
+      "\"1.2\""
+    ],
+    [
+      "IncrementVersion",
+      true
+    ],
+    [
+      "AssemblyReferences",
+      []
+    ],
+    [
+      "MultiProfileEnabled",
+      false
+    ],
+    [
+      "ProjectAsset",
+      {
+        "AssetId": "Project-8DE9AEBAB3B7CE0",
+        "Version": "1.2",
+        "BasedOnVersion": "1.1",
+        "VersionHistory": [
+          "1.0",
+          "1.1"
+        ]
+      }
+    ]
+  ]
+}

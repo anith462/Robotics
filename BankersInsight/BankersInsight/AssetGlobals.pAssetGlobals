@@ -1,0 +1,22 @@
+<OpenSpanDesignDocument Version="25.1.6.0" Serializer="2.0" Culture="en-US">
+  <ComponentInfo>
+    <Type Value="OpenSpan.Automation.AssetGlobalContainer" />
+    <Assembly Value="OpenSpan.Automation" />
+    <Dependencies>
+      <Dependency Id="WindowsAdapter-8DE813C448602A0" IsUsed="True" />
+    </Dependencies>
+    <AssemblyReferences>
+      <Assembly Value="System" />
+      <Assembly Value="System.Windows.Forms" />
+      <Assembly Value="OpenSpan" />
+      <Assembly Value="OpenSpan.Automation" />
+      <Assembly Value="OpenSpan.Controls" />
+    </AssemblyReferences>
+    <DynamicAssemblyReferences />
+    <FileReferences />
+    <BuildReferences />
+  </ComponentInfo>
+  <Component Version="1.0">
+    <OpenSpan.Automation.AssetGlobalContainer Name="AssetGlobals" Id="AssetGlobalContainer-8DE813C448BC0A4" />
+  </Component>
+</OpenSpanDesignDocument>

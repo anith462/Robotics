@@ -1,0 +1,490 @@
+<OpenSpanDesignDocument Version="25.1" Serializer="2.0" Culture="en-US">
+  <ComponentInfo>
+    <Type Value="OpenSpan.Automation.Automator" />
+    <Assembly Value="OpenSpan.Automation" />
+    <Dependencies>
+      <Dependency Id="WindowsAdapter-8DE813C448602A0" IsUsed="True" />
+    </Dependencies>
+    <AssemblyReferences>
+      <Assembly Value="System" />
+      <Assembly Value="OpenSpan" />
+      <Assembly Value="OpenSpan.Adapters.Windows" />
+      <Assembly Value="OpenSpan.Automation" />
+    </AssemblyReferences>
+    <DynamicAssemblyReferences />
+    <FileReferences />
+    <StartAtRuntime Value="False" />
+    <External Value="True" />
+  </ComponentInfo>
+  <Component Version="1.0">
+    <OpenSpan.Automation.Automator Name="StartApp" Id="Automator-8DE813C448AAA68">
+      <AutomationDocument>
+        <Size Value="5007, 5004" />
+        <Objects>
+          <ConnectionBlock>
+            <ConnectableUniqueId Value="Automator-8DE813C448AAA68\EntryPoint-8DA4A1A6F4A6F68" />
+            <Left Value="80" />
+            <Top Value="220" />
+            <PartID Value="1" />
+          </ConnectionBlock>
+          <ConnectionBlock>
+            <DisplayName Value="Properties" />
+            <ConnectableUniqueId Value="Automator-8DE813C448AAA68\ConnectableProperties-8DA4A1A746DFACB" />
+            <PartID Value="2" />
+            <Left Value="220" />
+            <Top Value="220" />
+            <Collapsed Value="False" />
+            <WillExecute Value="True" />
+            <InstanceName Value="BankerInsight" />
+            <Fittings>
+              <IsRunning Collapsed="False" ActualText="IsRunning" />
+            </Fittings>
+            <OverriddenIds />
+          </ConnectionBlock>
+          <ConnectionBlock>
+            <ConnectableUniqueId Value="Automator-8DE813C448AAA68\LabelHost-8DA4A1A9D20FE99" />
+            <Left Value="80" />
+            <Top Value="640" />
+            <PartID Value="4" />
+          </ConnectionBlock>
+          <ConnectionBlock>
+            <DisplayName Value="BankerInsight.Started" />
+            <ConnectableUniqueId Value="Automator-8DE813C448AAA68\WaitForEvent-8DA4A1B8AF3F272" />
+            <PartID Value="8" />
+            <Left Value="420" />
+            <Top Value="320" />
+            <Collapsed Value="True" />
+            <WillExecute Value="True" />
+            <InstanceName Value="WaitForEvent" />
+            <OverriddenIds />
+          </ConnectionBlock>
+          <ConnectionBlock>
+            <DisplayName Value="Start" />
+            <ConnectableUniqueId Value="Automator-8DE813C448AAA68\ConnectableMethod-8DA4A1B9C17EC60" />
+            <PartID Value="12" />
+            <Left Value="660" />
+            <Top Value="320" />
+            <Collapsed Value="False" />
+            <WillExecute Value="True" />
+            <InstanceName Value="BankerInsight" />
+            <OverriddenIds />
+          </ConnectionBlock>
+          <ConnectionBlock type="OpenSpan.Automation.Design.ConnectionBlocks.MultiExitPointBlock">
+            <ConnectableUniqueId Value="Automator-8DE813C448AAA68\ExitPoint-8DA4A1BB700CDF9" />
+            <Left Value="280" />
+            <Top Value="640" />
+            <PartID Value="18" />
+            <Title Value="Exit" />
+            <EventName Value="" />
+          </ConnectionBlock>
+          <ConnectionBlock>
+            <DisplayName Value="GoToLabel" />
+            <ConnectableUniqueId Value="Automator-8DE813C448AAA68\JumpHost-8DA4A1F53C3B46C" />
+            <PartID Value="21" />
+            <Left Value="660" />
+            <Top Value="540" />
+            <Collapsed Value="False" />
+            <WillExecute Value="True" />
+            <InstanceName Value="Jump To Exit" />
+            <OverriddenIds />
+          </ConnectionBlock>
+          <ConnectionBlock>
+            <DisplayName Value="GoToLabel" />
+            <ConnectableUniqueId Value="Automator-8DE813C448AAA68\JumpHost-8DA4A1F5AEE7EB0" />
+            <PartID Value="22" />
+            <Left Value="660" />
+            <Top Value="420" />
+            <Collapsed Value="False" />
+            <WillExecute Value="True" />
+            <InstanceName Value="Jump To Exit" />
+            <OverriddenIds />
+          </ConnectionBlock>
+          <ConnectionBlock>
+            <DisplayName Value="GoToLabel" />
+            <ConnectableUniqueId Value="Automator-8DE813C448AAA68\JumpHost-8DA4A1F67818AE5" />
+            <PartID Value="25" />
+            <Left Value="420" />
+            <Top Value="220" />
+            <Collapsed Value="False" />
+            <WillExecute Value="True" />
+            <InstanceName Value="Jump To Exit" />
+            <OverriddenIds />
+          </ConnectionBlock>
+        </Objects>
+        <Links>
+          <Link PartID="3" Sensitive="False" Asynchronous="False" LogBeforeExecution="" LogAfterExecution="">
+            <From PartID="1" PortName="Complete" PortType="Event" ConnectableId="Automator-8DE813C448AAA68\EntryPoint-8DA4A1A6F4A6F68" MemberComponentId="Automator-8DE813C448AAA68\EntryPoint-8DA4A1A6F4A6F68" />
+            <To PartID="2" PortName="DoWork" PortType="Method" ConnectableId="Automator-8DE813C448AAA68\ConnectableProperties-8DA4A1A746DFACB" MemberComponentId="Automator-8DE813C448AAA68\ConnectableProperties-8DA4A1A746DFACB" />
+            <LinkPoints>
+              <Point value="122, 172" />
+              <Point value="132, 172" />
+              <Point value="140, 172" />
+              <Point value="140, 195" />
+              <Point value="180, 195" />
+              <Point value="190, 195" />
+            </LinkPoints>
+          </Link>
+          <DecisionEventLink PartID="11" Sensitive="False" Asynchronous="False" LogBeforeExecution="" LogAfterExecution="">
+            <From PartID="2" ParentMemberName="IsRunning" DecisionValue="False" ConnectableId="Automator-8DE813C448AAA68\ConnectableProperties-8DA4A1A746DFACB" />
+            <To PartID="8" PortName="DoWork" PortType="Method" ConnectableId="Automator-8DE813C448AAA68\WaitForEvent-8DA4A1B8AF3F272" MemberComponentId="Automator-8DE813C448AAA68\WaitForEvent-8DA4A1B8AF3F272" />
+            <LinkPoints>
+              <Point value="332, 249" />
+              <Point value="342, 249" />
+              <Point value="348, 249" />
+              <Point value="348, 285" />
+              <Point value="390, 285" />
+              <Point value="400, 285" />
+            </LinkPoints>
+          </DecisionEventLink>
+          <Link PartID="13" Sensitive="False" Asynchronous="False" LogBeforeExecution="" LogAfterExecution="">
+            <From PartID="8" PortName="StartingSetup" PortType="Event" ConnectableId="Automator-8DE813C448AAA68\WaitForEvent-8DA4A1B8AF3F272" MemberComponentId="Automator-8DE813C448AAA68\WaitForEvent-8DA4A1B8AF3F272" />
+            <To PartID="12" PortName="DoWork" PortType="Method" ConnectableId="Automator-8DE813C448AAA68\ConnectableMethod-8DA4A1B9C17EC60" MemberComponentId="Automator-8DE813C448AAA68\ConnectableMethod-8DA4A1B9C17EC60" />
+            <LinkPoints>
+              <Point value="582, 305" />
+              <Point value="592, 305" />
+              <Point value="596, 305" />
+              <Point value="596, 265" />
+              <Point value="640, 265" />
+              <Point value="650, 265" />
+            </LinkPoints>
+          </Link>
+          <Link PartID="19" Sensitive="False" Asynchronous="False" LogBeforeExecution="" LogAfterExecution="">
+            <From PartID="4" PortName="Complete" PortType="Event" ConnectableId="Automator-8DE813C448AAA68\LabelHost-8DA4A1A9D20FE99" MemberComponentId="Automator-8DE813C448AAA68\LabelHost-8DA4A1A9D20FE99" />
+            <To PartID="18" PortName="DoWork" PortType="Method" ConnectableId="Automator-8DE813C448AAA68\ExitPoint-8DA4A1BB700CDF9" MemberComponentId="Automator-8DE813C448AAA68\ExitPoint-8DA4A1BB700CDF9" />
+            <LinkPoints>
+              <Point value="143, 492" />
+              <Point value="153, 492" />
+              <Point value="153, 491" />
+              <Point value="153, 491" />
+              <Point value="180, 491" />
+              <Point value="190, 491" />
+            </LinkPoints>
+          </Link>
+          <Link PartID="20" Sensitive="False" Asynchronous="False" LogBeforeExecution="" LogAfterExecution="">
+            <From PartID="4" PortName="_param1" PortType="Property" ConnectableId="Automator-8DE813C448AAA68\LabelHost-8DA4A1A9D20FE99" MemberComponentId="EMPTY" />
+            <To PartID="18" PortName="Result" PortType="Property" ConnectableId="Automator-8DE813C448AAA68\ExitPoint-8DA4A1BB700CDF9" MemberComponentId="EMPTY" />
+            <LinkPoints>
+              <Point value="143, 522" />
+              <Point value="153, 522" />
+              <Point value="153, 521" />
+              <Point value="153, 521" />
+              <Point value="179, 521" />
+              <Point value="189, 521" />
+            </LinkPoints>
+          </Link>
+          <Link PartID="23" Sensitive="False" Asynchronous="False" LogBeforeExecution="" LogAfterExecution="">
+            <From PartID="8" PortName="Raised" PortType="Event" ConnectableId="Automator-8DE813C448AAA68\WaitForEvent-8DA4A1B8AF3F272" MemberComponentId="Automator-8DE813C448AAA68\WaitForEvent-8DA4A1B8AF3F272" />
+            <To PartID="22" PortName="DoWork" PortType="Method" ConnectableId="Automator-8DE813C448AAA68\JumpHost-8DA4A1F5AEE7EB0" MemberComponentId="Automator-8DE813C448AAA68\JumpHost-8DA4A1F5AEE7EB0" />
+            <LinkPoints>
+              <Point value="582, 325" />
+              <Point value="592, 325" />
+              <Point value="592, 322" />
+              <Point value="592, 322" />
+              <Point value="640, 322" />
+              <Point value="650, 322" />
+            </LinkPoints>
+          </Link>
+          <Link PartID="24" Sensitive="False" Asynchronous="False" LogBeforeExecution="" LogAfterExecution="">
+            <From PartID="8" PortName="TimedOut" PortType="Event" ConnectableId="Automator-8DE813C448AAA68\WaitForEvent-8DA4A1B8AF3F272" MemberComponentId="Automator-8DE813C448AAA68\WaitForEvent-8DA4A1B8AF3F272" />
+            <To PartID="21" PortName="DoWork" PortType="Method" ConnectableId="Automator-8DE813C448AAA68\JumpHost-8DA4A1F53C3B46C" MemberComponentId="Automator-8DE813C448AAA68\JumpHost-8DA4A1F53C3B46C" />
+            <LinkPoints>
+              <Point value="582, 346" />
+              <Point value="592, 346" />
+              <Point value="596, 346" />
+              <Point value="596, 402" />
+              <Point value="640, 402" />
+              <Point value="650, 402" />
+            </LinkPoints>
+          </Link>
+          <DecisionEventLink PartID="26" Sensitive="False" Asynchronous="False" LogBeforeExecution="" LogAfterExecution="">
+            <From PartID="2" ParentMemberName="IsRunning" DecisionValue="True" ConnectableId="Automator-8DE813C448AAA68\ConnectableProperties-8DA4A1A746DFACB" />
+            <To PartID="25" PortName="DoWork" PortType="Method" ConnectableId="Automator-8DE813C448AAA68\JumpHost-8DA4A1F67818AE5" MemberComponentId="Automator-8DE813C448AAA68\JumpHost-8DA4A1F67818AE5" />
+            <LinkPoints>
+              <Point value="332, 231" />
+              <Point value="342, 231" />
+              <Point value="348, 231" />
+              <Point value="348, 172" />
+              <Point value="390, 172" />
+              <Point value="400, 172" />
+            </LinkPoints>
+          </DecisionEventLink>
+        </Links>
+        <Comments />
+        <SubGraphs />
+      </AutomationDocument>
+      <GridSize Value="10, 10" />
+      <IsExternal Value="True" />
+      <Content Name="DynamicMembers">
+        <Items>
+          <OpenSpan.DynamicMembers.DynamicMethodInfo dynamicType="Method" name="_EntryPointExecute" aliasName="Run" visibility="DefaultOn" source="" blockTypeName="OpenSpan.Automation.Design.ConnectionBlocks.EntryPointExecuteBlock" returnType="System.Boolean" />
+        </Items>
+      </Content>
+    </OpenSpan.Automation.Automator>
+    <OpenSpan.Automation.EntryPoint Name="EntryPoint1" Id="EntryPoint-8DA4A1A6F4A6F68">
+      <AliasName Value="Run" />
+      <ComponentName Value="Run" />
+      <DisplayName Value="Run" />
+      <ExceptionsHandled Value="False" />
+      <InstanceTypeName Value="OpenSpan.Automation.EntryPoint" />
+      <InstanceUniqueId Value="Automator-8DE813C448AAA68\EntryPoint-8DA4A1A6F4A6F68" />
+      <MemberDetails Value="Run" />
+      <MethodName Value="_EntryPointExecute" />
+      <Removing Value="False" />
+      <Sensitive Value="False" Extended="True" />
+      <UseAlias Value="True" />
+      <Content Name="Controls">
+        <Items>
+          <OpenSpan.Automation.HiddenTypeProxy Name="HiddenTypeProxy2" Id="HiddenTypeProxy-8DA4A1BBB01FDC4">
+            <AliasName Value="Result" />
+            <Parent Value="ComponentReference" Name="EntryPoint1" />
+            <ProxiedTypeName Value="System.Boolean, mscorlib" />
+            <Scope Value="Local" Extended="True" />
+            <Sensitive Value="False" Extended="True" />
+            <UseAlias Value="True" />
+            <Content Name="DynamicMembers">
+              <Items>
+                <OpenSpan.DynamicMembers.DynamicPropertyInfo dynamicType="Property" name="Instance" canRead="True" canWrite="True" type="System.Boolean" aliasName="Instance" shouldSerialize="False" visibility="AlwaysHidden" source="" blockTypeName="" tag="" />
+              </Items>
+            </Content>
+          </OpenSpan.Automation.HiddenTypeProxy>
+        </Items>
+      </Content>
+      <Content Name="DynamicMembers">
+        <Items>
+          <OpenSpan.DynamicMembers.DynamicPropertyInfo dynamicType="Property" name="Result" canRead="True" canWrite="True" type="System.Boolean" aliasName="Result" shouldSerialize="False" visibility="AlwaysHidden" source="" blockTypeName="" tag="" />
+        </Items>
+      </Content>
+    </OpenSpan.Automation.EntryPoint>
+    <OpenSpan.Automation.ConnectableProperties Name="ConnectableProperti1" Id="ConnectableProperties-8DA4A1A746DFACB">
+      <ComponentName Value="BankerInsight" />
+      <DefaultValues Value="" />
+      <DisplayName Value="Properties" />
+      <ExceptionsHandled Value="False" />
+      <InstanceTypeName Value="OpenSpan.Adapters.Windows.WindowsAdapter" />
+      <InstanceUniqueId Value="WindowsAdapter-8DE813C448602A0" />
+      <MemberDetails Value=".IsRunning Property" />
+      <Sensitive Value="False" Extended="True" />
+      <Content Name="MemberPrototypes">
+        <Items>
+          <OpenSpan.Automation.MemberPrototype>
+            <MemberName Value="IsRunning" />
+            <MemberType Value="Property" />
+            <TypeName Value="System.Boolean" />
+          </OpenSpan.Automation.MemberPrototype>
+        </Items>
+      </Content>
+    </OpenSpan.Automation.ConnectableProperties>
+    <OpenSpan.Automation.LabelHost Name="LabelHost1" Id="LabelHost-8DA4A1A9D20FE99">
+      <AliasName Value="Exit" />
+      <ComponentName Value="Exit" />
+      <DisplayName Value="Exit" />
+      <ExceptionsHandled Value="False" />
+      <InstanceTypeName Value="OpenSpan.Automation.LabelHost" />
+      <InstanceUniqueId Value="Automator-8DE813C448AAA68\LabelHost-8DA4A1A9D20FE99" />
+      <LabelName Value="Exit" />
+      <MemberDetails Value=" . Exit" />
+      <Sensitive Value="False" Extended="True" />
+      <UseAlias Value="True" />
+      <Content Name="Controls">
+        <Items>
+          <OpenSpan.Automation.HiddenTypeProxy Name="HiddenTypeProxy1" Id="HiddenTypeProxy-8DA4A1B3D14A0B8">
+            <AliasName Value="result" />
+            <Parent Value="ComponentReference" Name="LabelHost1" />
+            <ProxiedTypeName Value="System.Boolean, mscorlib" />
+            <Scope Value="Local" Extended="True" />
+            <Sensitive Value="False" Extended="True" />
+            <UseAlias Value="True" />
+            <Content Name="DynamicMembers">
+              <Items>
+                <OpenSpan.DynamicMembers.DynamicPropertyInfo dynamicType="Property" name="Instance" canRead="True" canWrite="True" type="System.Boolean" aliasName="Instance" shouldSerialize="False" visibility="AlwaysHidden" source="" blockTypeName="" tag="" />
+              </Items>
+            </Content>
+          </OpenSpan.Automation.HiddenTypeProxy>
+        </Items>
+      </Content>
+      <Content Name="DynamicMembers">
+        <Items>
+          <OpenSpan.DynamicMembers.DynamicPropertyInfo dynamicType="Property" name="_param1" canRead="True" canWrite="True" type="System.Boolean" aliasName="result" shouldSerialize="False" visibility="AlwaysHidden" source="" blockTypeName="" tag="" />
+          <OpenSpan.DynamicMembers.DynamicMethodInfo dynamicType="Method" name="GoToLabel" aliasName="GoToLabel" visibility="AlwaysHidden" source="" blockTypeName="" returnType="System.Void">
+            <param name="_param1" aliasName="result" paramType="System.Boolean" isIn="True" isOut="False" position="0" />
+          </OpenSpan.DynamicMembers.DynamicMethodInfo>
+        </Items>
+      </Content>
+    </OpenSpan.Automation.LabelHost>
+    <OpenSpan.Automation.WaitForEvent Name="WaitForEvent1" Id="WaitForEvent-8DA4A1B8AF3F272">
+      <ComponentName Value="BankerInsight" />
+      <DisplayName Value="BankerInsight.Started" />
+      <ExceptionsHandled Value="False" />
+      <InstanceTypeName Value="OpenSpan.Adapters.Windows.WindowsAdapter" />
+      <InstanceUniqueId Value="WindowsAdapter-8DE813C448602A0" />
+      <MemberDetails Value=".Started Event" />
+      <Sensitive Value="False" Extended="True" />
+      <Content Name="MemberPrototypes">
+        <Items>
+          <OpenSpan.Automation.MemberPrototype>
+            <MemberName Value="Started" />
+            <MemberType Value="Event" />
+            <TypeName Value="System.EventHandler" />
+          </OpenSpan.Automation.MemberPrototype>
+        </Items>
+      </Content>
+    </OpenSpan.Automation.WaitForEvent>
+    <OpenSpan.Automation.ConnectableMethod Name="ConnectableMethod1" Id="ConnectableMethod-8DA4A1B9C17EC60">
+      <ComponentName Value="BankerInsight" />
+      <DisplayName Value="Start" />
+      <ExceptionsHandled Value="False" />
+      <InstanceTypeName Value="OpenSpan.Adapters.Windows.WindowsAdapter" />
+      <InstanceUniqueId Value="WindowsAdapter-8DE813C448602A0" />
+      <MemberDetails Value=".Start() Method" />
+      <ParamsLength Value="0" />
+      <Sensitive Value="False" Extended="True" />
+      <SerializedParamsDefaultValues Value="" />
+      <Content Name="MemberPrototypes">
+        <Items>
+          <OpenSpan.Automation.MemberPrototype>
+            <MemberName Value="Start" />
+            <MemberType Value="Method" />
+            <TypeName Value="System.Void" />
+            <Content Name="Signature">
+              <OpenSpan.Automation.MethodSignature>
+                <ReturnType Value="System.Void" />
+              </OpenSpan.Automation.MethodSignature>
+            </Content>
+          </OpenSpan.Automation.MemberPrototype>
+        </Items>
+      </Content>
+    </OpenSpan.Automation.ConnectableMethod>
+    <OpenSpan.Automation.ExitPoint Name="ExitPoint1" Id="ExitPoint-8DA4A1BB700CDF9">
+      <ComponentName Value="Run" />
+      <DisplayName Value="Exit" />
+      <EntryPoint Value="ComponentReference" Name="EntryPoint1" />
+      <ExceptionsHandled Value="False" />
+      <InstanceTypeName Value="OpenSpan.Automation.EntryPoint" />
+      <InstanceUniqueId Value="Automator-8DE813C448AAA68\EntryPoint-8DA4A1A6F4A6F68" />
+      <MemberDetails Value="Exit" />
+      <Sensitive Value="False" Extended="True" />
+      <Content Name="DynamicMembers">
+        <Items>
+          <OpenSpan.DynamicMembers.DynamicPropertyInfo dynamicType="Property" name="Result" canRead="True" canWrite="True" type="System.Boolean" aliasName="Result" shouldSerialize="False" visibility="DefaultOn" source="" blockTypeName="" tag="" />
+        </Items>
+      </Content>
+    </OpenSpan.Automation.ExitPoint>
+    <OpenSpan.Automation.JumpHost Name="JumpHost1" Id="JumpHost-8DA4A1F53C3B46C">
+      <ComponentName Value="Exit" />
+      <DisplayName Value="GoToLabel" />
+      <ExceptionsHandled Value="False" />
+      <InstanceTypeName Value="OpenSpan.Automation.LabelHost" />
+      <InstanceUniqueId Value="Automator-8DE813C448AAA68\LabelHost-8DA4A1A9D20FE99" />
+      <MemberDetails Value=" . Jump To Exit - Exit" />
+      <ParamsLength Value="0" />
+      <Sensitive Value="False" Extended="True" />
+      <SerializedParamsDefaultValues Value="" />
+      <Content Name="MemberPrototypes">
+        <Items>
+          <OpenSpan.Automation.MemberPrototype>
+            <MemberName Value="GoToLabel" />
+            <MemberType Value="Method" />
+            <TypeName Value="System.Void" />
+            <Content Name="Signature">
+              <OpenSpan.Automation.MethodSignature>
+                <ReturnType Value="System.Void" />
+                <Content Name="ParameterPrototype">
+                  <Items>
+                    <OpenSpan.Automation.ParameterPrototype>
+                      <CanRead Value="False" />
+                      <CanWrite Value="True" />
+                      <DefaultSet Value="True" />
+                      <DefaultValue Value="False" />
+                      <IsThis Value="False" />
+                      <ParamName Value="_param1" />
+                      <Position Value="0" />
+                      <TypeName Value="System.Boolean" />
+                    </OpenSpan.Automation.ParameterPrototype>
+                  </Items>
+                </Content>
+              </OpenSpan.Automation.MethodSignature>
+            </Content>
+          </OpenSpan.Automation.MemberPrototype>
+        </Items>
+      </Content>
+    </OpenSpan.Automation.JumpHost>
+    <OpenSpan.Automation.JumpHost Name="JumpHost2" Id="JumpHost-8DA4A1F5AEE7EB0">
+      <ComponentName Value="Exit" />
+      <DisplayName Value="GoToLabel" />
+      <ExceptionsHandled Value="False" />
+      <InstanceTypeName Value="OpenSpan.Automation.LabelHost" />
+      <InstanceUniqueId Value="Automator-8DE813C448AAA68\LabelHost-8DA4A1A9D20FE99" />
+      <MemberDetails Value=" . Jump To Exit - Exit" />
+      <ParamsLength Value="0" />
+      <Sensitive Value="False" Extended="True" />
+      <SerializedParamsDefaultValues Value="" />
+      <Content Name="MemberPrototypes">
+        <Items>
+          <OpenSpan.Automation.MemberPrototype>
+            <MemberName Value="GoToLabel" />
+            <MemberType Value="Method" />
+            <TypeName Value="System.Void" />
+            <Content Name="Signature">
+              <OpenSpan.Automation.MethodSignature>
+                <ReturnType Value="System.Void" />
+                <Content Name="ParameterPrototype">
+                  <Items>
+                    <OpenSpan.Automation.ParameterPrototype>
+                      <CanRead Value="False" />
+                      <CanWrite Value="True" />
+                      <DefaultSet Value="True" />
+                      <DefaultValue Value="True" />
+                      <IsThis Value="False" />
+                      <ParamName Value="_param1" />
+                      <Position Value="0" />
+                      <TypeName Value="System.Boolean" />
+                    </OpenSpan.Automation.ParameterPrototype>
+                  </Items>
+                </Content>
+              </OpenSpan.Automation.MethodSignature>
+            </Content>
+          </OpenSpan.Automation.MemberPrototype>
+        </Items>
+      </Content>
+    </OpenSpan.Automation.JumpHost>
+    <OpenSpan.Automation.JumpHost Name="JumpHost3" Id="JumpHost-8DA4A1F67818AE5">
+      <ComponentName Value="Exit" />
+      <DisplayName Value="GoToLabel" />
+      <ExceptionsHandled Value="False" />
+      <InstanceTypeName Value="OpenSpan.Automation.LabelHost" />
+      <InstanceUniqueId Value="Automator-8DE813C448AAA68\LabelHost-8DA4A1A9D20FE99" />
+      <MemberDetails Value=" . Jump To Exit - Exit" />
+      <ParamsLength Value="0" />
+      <Sensitive Value="False" Extended="True" />
+      <SerializedParamsDefaultValues Value="" />
+      <Content Name="MemberPrototypes">
+        <Items>
+          <OpenSpan.Automation.MemberPrototype>
+            <MemberName Value="GoToLabel" />
+            <MemberType Value="Method" />
+            <TypeName Value="System.Void" />
+            <Content Name="Signature">
+              <OpenSpan.Automation.MethodSignature>
+                <ReturnType Value="System.Void" />
+                <Content Name="ParameterPrototype">
+                  <Items>
+                    <OpenSpan.Automation.ParameterPrototype>
+                      <CanRead Value="False" />
+                      <CanWrite Value="True" />
+                      <DefaultSet Value="True" />
+                      <DefaultValue Value="True" />
+                      <IsThis Value="False" />
+                      <ParamName Value="_param1" />
+                      <Position Value="0" />
+                      <TypeName Value="System.Boolean" />
+                    </OpenSpan.Automation.ParameterPrototype>
+                  </Items>
+                </Content>
+              </OpenSpan.Automation.MethodSignature>
+            </Content>
+          </OpenSpan.Automation.MemberPrototype>
+        </Items>
+      </Content>
+    </OpenSpan.Automation.JumpHost>
+  </Component>
+</OpenSpanDesignDocument>
